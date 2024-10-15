@@ -1,7 +1,7 @@
 package com.gestionProduits.produits.controller;
 
 import com.gestionProduits.produits.dto.ProduitDto;
-import com.gestionProduits.produits.service.ProduitServiceImpl;
+import com.gestionProduits.produits.service.IProduitService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +14,7 @@ import java.util.List;
 public class ProduitController {
 
     @Autowired
-    private ProduitServiceImpl produitService;
+    private IProduitService produitService;
 
     @Operation(summary = "Récupérer tous les produits", description = "Renvoie la liste de tous les produits disponibles.")
     @RequestMapping(method = RequestMethod.GET, value = "/products")
