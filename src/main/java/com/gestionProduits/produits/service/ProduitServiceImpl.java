@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class ProduitService {
+public class ProduitServiceImpl implements IProduitService{
 
     @Autowired
     private ProduitRepository repository;
